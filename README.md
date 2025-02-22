@@ -7,11 +7,11 @@ The package is currently under development by [SUPPRESS Research Group](https://
 ## How it works
 The Lorentz system is a well-known chaotic system with the following differential equations:
 
-```math
-\dot{u} = \sigma(v - u) \\
-\dot{v} = u(\rho - w) - v \\
-\dot{w} = uv - \beta w \\
-```
+$\dot{u} = \sigma(v - u)$
+
+$\dot{v} = u(\rho - w) - v$
+
+$\dot{w} = uv - \beta w$
 
 With $\sigma = 10$, $\rho = 28$ and $\beta = 8/3$, sampling every $dt = 0.01$, we can generate the following time series:
 
