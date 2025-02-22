@@ -102,3 +102,10 @@ def partial_lorenz_dyn(t, x):
 
     return dx
 ```
+
+# Installation
+Currently, an alpha version of the package is available on testPyPi. To install it, run the following command:
+
+```bash
+pip install -i https://test.pypi.org/simple/ pirpy
+```
