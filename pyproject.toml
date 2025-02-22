@@ -1,0 +1,19 @@
+[project]
+name = "pirpy"
+version = "0.1.0"
+description = "Physics-Informed plug-in for ReservoirPy"
+authors = [
+    {name = "Guzmán", email = "ggonzm@unileon.es"},
+]
+dependencies = ["reservoirpy>=0.3.12", "scikit-learn>=1.6.1"]
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
