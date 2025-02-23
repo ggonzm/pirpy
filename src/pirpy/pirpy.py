@@ -78,7 +78,7 @@ def add_knowledge(esn: Model, scaler: BaseEstimator, dt: float,
 
     # Arguments for the objective function
     Wout = esn.nodes[-1].Wout.flatten()
-    args = (esn, X_pred, y_pred, t, dynamics, scaler, warmup, alpha, dt)
+    args = (esn, dt, X_pred, y_pred, t, dynamics, scaler, warmup, alpha)
 
     # Optimization
     logger.status(f'[Start][{datetime.now()}] Loss: {objective(Wout, *args)}')
