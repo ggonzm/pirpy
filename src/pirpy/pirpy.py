@@ -130,7 +130,7 @@ def objective(Wout: np.ndarray, *args) -> float:
     y_hat = esn.run(X_pred[warmup:])
 
     # Compute all predicted derivatives with forward Euler
-    y_diff_hat = np.diff(y_hat, axis=0, prepend=np.atleast_2d(X_pred[warmup])) / dt
+    y_diff_hat = np.diff(y_hat, axis=0, prepend=np.atleast_2d(y_pred[max(warmup-1,0)])) / dt
 
     # Compute the derivatives according to the dynamics
     y_dot = dynamics(t, scaler.inverse_transform(y_hat).T).T * scaler.scale_
